@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Conversor de Unidades</h1>
+  <form onsubmit="event.preventDefault(); convert();">
+    <label for="value">Valor:</label>
+    <input type="text" id="value" step="any">
+    
+    <label for="conversion-type">Tipo de conversión:</label>
+    <select id="conversion-type" required>
+      <option value="mmToCm">Milímetros a Centímetros</option>
+      <option value="cmToMm">Centímetros a Milímetros</option>
+      <option value="cmToM">Centímetros a Metros</option>
+      <option value="mToCm">Metros a Centímetros</option>
+      <option value="mToKm">Metros a Kilómetros</option> 
+      <option value="kmToM">Kilómetros a Metros</option>
+      <option value="ftToM">Pies a Metros</option>
+      <option value="mToFt">Metros a Pies</option>
+      <option value="inToFt">Pulgadas a Pies</option>
+      <option value="ftToIn">Pies a Pulgadas</option>
+      <option value="inToCm">Pulgadas a Centímetros</option>
+      <option value="cmToIn">Centímetros a Pulgadas</option>
+    </select>
+    <button id ="convert-button" type="submit">Convertir</button>
+    <button id ="clear-button" type="button" onclick="clearForm()">Limpiar</button>
+  </form>
+  <div id="result-container" class="hidden">
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
